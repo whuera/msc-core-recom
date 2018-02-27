@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import ec.com.core.springrestfulservices.model.Contact;
 import ec.com.core.springrestfulservices.repository.ContactRepository;
 import ec.com.core.springrestfulservices.service.ContactService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The Class ContactServiceImpl.
@@ -38,6 +40,17 @@ public class ContactServiceImpl implements ContactService {
 	public Contact saveContact(Contact contact){
 		System.out.println("object contact "+contact.toString());
 		return contactRepository.saveAndFlush(contact); }
+	
+	
+	   /**
+     * Method Search contact by Id
+     * @param id
+     * @return
+     */
+		public Contact getContactById (int id){
+      //      logger.info("search contcat by id: "+id);
+	            return contactRepository.findOne(id);
+        }
 
 }
 

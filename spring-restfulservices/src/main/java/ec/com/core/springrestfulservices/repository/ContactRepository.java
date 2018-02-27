@@ -7,4 +7,4 @@ import ec.com.core.springrestfulservices.model.Contact;
 /**
  * The Interface ContactRepository.
  */
-public interface ContactRepository extends JpaRepository<Contact, Long>{}
+public interface ContactRepository extends JpaRepository<Contact, Integer>{}

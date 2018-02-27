@@ -15,4 +15,6 @@ public interface ContactService {
      * @return the all contacts
      */
     public List<Contact> getAllContacts();
+    
+    public Contact getContactById (int id);
 }
